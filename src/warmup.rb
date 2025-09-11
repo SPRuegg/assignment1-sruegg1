@@ -23,7 +23,11 @@ def isPalindrome(n)
 end
 
 def nthmax(n, a)
-    raise Exception, "Not Implemented"
+    if (n < 0) then return nil end
+    if (n > a.length - 1) then return nil end
+    if (a.length <= 0) then return nil end
+    a = a.sort
+    a[-(n+1)]
 end
 
 def freq(s)
