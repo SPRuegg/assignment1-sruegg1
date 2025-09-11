@@ -48,7 +48,12 @@ def freq(s)
 end
 
 def zipHash(arr1, arr2)
-    raise Exception, "Not Implemented"
+    if (arr1.length != arr2.length) then return nil end
+    hash = {}
+    (arr1.length).times do |i|
+        hash[arr1[i]] = arr2[i]
+    end
+    hash
 end
 
 def hashToArray(hash)
