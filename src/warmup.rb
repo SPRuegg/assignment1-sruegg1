@@ -31,7 +31,20 @@ def nthmax(n, a)
 end
 
 def freq(s)
-    raise Exception, "Not Implemented"
+    if (s.length == 0) then return "" end
+    if (s.length <= 2) then return s[0] end # Assumption that there can be no ties, means a two character string, has the same letter, also includes one character string
+    lookup = []
+    maxCount = 0
+    mostFreq = ""
+    (s.length).times do |i|
+        asciiVal = s[i].ord
+        lookup[asciiVal] = lookup[asciiVal].to_i + 1 # to_i in case it is nil
+        if (lookup[asciiVal] > maxCount) then 
+            maxCount = lookup[asciiVal] 
+            mostFreq = s[i]
+        end
+    end
+    mostFreq
 end
 
 def zipHash(arr1, arr2)
