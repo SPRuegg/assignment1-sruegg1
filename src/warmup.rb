@@ -57,5 +57,10 @@ def zipHash(arr1, arr2)
 end
 
 def hashToArray(hash)
-    raise Exception, "Not Implemented"
+    if (hash.length == 0) then return [] end
+    arrs = []
+    hash.each do |key, value|
+        arrs << [key, value]
+    end
+    arrs
 end
