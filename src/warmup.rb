@@ -1,5 +1,12 @@
 def fib(n)
-    raise Exception, "Not Implemented"
+    if (n < 0) then return nil end
+    if (n == 0) then return [] end
+    if (n == 1) then return [0] end
+    arr = [0, 1]
+    (n-2).times do
+        arr << (arr[-1] + arr[-2])
+    end
+    arr
 end
 
 def isPalindrome(n)
