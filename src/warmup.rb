@@ -10,7 +10,16 @@ def fib(n)
 end
 
 def isPalindrome(n)
-    raise Exception, "Not Implemented"
+    return true if n >= 0 && n < 10
+    return false if n % 10 == 0
+
+    reversed_half = 0
+    while n > reversed_half
+        reversed_half = (reversed_half * 10) + (n % 10)
+        n /= 10
+    end
+
+    n == reversed_half || n == reversed_half / 10
 end
 
 def nthmax(n, a)
