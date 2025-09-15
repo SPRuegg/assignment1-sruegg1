@@ -26,7 +26,7 @@ class PhoneBook
     end
 
     def lookupByNum(number)
-        raise Exception, "Not implemented"
+        @hashForListedNumbers[number]
     end
 
     def namesByAc(areacode)
