@@ -30,6 +30,6 @@ class PhoneBook
     end
 
     def namesByAc(areacode)
-        raise Exception, "Not implemented"
+        @hashForNames.select { |_name, details| details[:number].start_with?(areacode) }.keys
     end
 end
